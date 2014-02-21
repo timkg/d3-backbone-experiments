@@ -1,6 +1,5 @@
-var vocabItems = new VocabItemCollection();
+var course = buildCourse();
 
-vocabItems.each(function (model) {
-	var view = new VocabItemModelBasicView({model: model});
-	$(document.body).append(view.render().el);
-});
+var courseView = new courseView({model: course});
+
+$(document.body).append(courseView.render().el);
