@@ -60,7 +60,7 @@ function buildCourse () {
 
 	var lessons = [];
 	for (var i = 0; i < amountOfLessonsPerCourse; i++) {
-		lessons.push(buildLesson(title));
+		lessons.push(buildLesson());
 	}	
 	
 	return new Course({
