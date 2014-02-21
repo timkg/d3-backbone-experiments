@@ -1,3 +1,4 @@
+// from http://www.shesek.info/web-development/recursive-backbone-models-tojson
 Backbone.Model.prototype.toJSON = function() {
     if (this._isSerializing) {
         return this.id || this.cid;
