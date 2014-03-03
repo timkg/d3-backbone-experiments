@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<script src="bower_components/d3/d3.js"></script>
+<body>
+
+<svg></svg>
+
+<script>
+var data = [{"name":"ha","knowledgeLevel":6,"daysSinceLastReview":32},{"name":"niwki","knowledgeLevel":1,"daysSinceLastReview":4},{"name":"cawpamo","knowledgeLevel":3,"daysSinceLastReview":15},{"name":"daof","knowledgeLevel":2,"daysSinceLastReview":49},{"name":"otuckuc","knowledgeLevel":4,"daysSinceLastReview":15},{"name":"ta","knowledgeLevel":1,"daysSinceLastReview":4},{"name":"jetjareg","knowledgeLevel":2,"daysSinceLastReview":30},{"name":"saru","knowledgeLevel":2,"daysSinceLastReview":16},{"name":"wipiw","knowledgeLevel":1,"daysSinceLastReview":4},{"name":"veud","knowledgeLevel":5,"daysSinceLastReview":15},{"name":"upo","knowledgeLevel":2,"daysSinceLastReview":6},{"name":"tocuku","knowledgeLevel":1,"daysSinceLastReview":45},{"name":"ijpup","knowledgeLevel":1,"daysSinceLastReview":19},{"name":"nuf","knowledgeLevel":6,"daysSinceLastReview":10},{"name":"ajva","knowledgeLevel":4,"daysSinceLastReview":3}];
+
+var NODE_RADIUS = 3;
+
+var nodes = d3.select("svg").selectAll("g")
+	.data(data)
+	.enter()
+	.append('g');
+  
+nodes
+	.append("circle")
+	.attr('r', function (d) { return NODE_RADIUS; })
+	.style('fill', function (d) { return '#999' })
+
+nodes
+	.attr("transform", function (d, i) { return "translate(" + (i+1) * (NODE_RADIUS * 4) + "," + 20 + ")"; });
+
+</script>
+	
+</body>
+</html>
