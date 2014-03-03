@@ -24,7 +24,7 @@ var nodes = d3.select("svg").selectAll("g")
 nodes
 	.append("circle")
 	.attr('r', function (d) { return NODE_RADIUS; })
-	.style('fill', function (d) { return '#999' })
+	.style('fill', function (d) { return '#ccc' })
 
 function correct (node, i) {
 	node
@@ -32,7 +32,7 @@ function correct (node, i) {
 		.duration(250)
 		.attr("transform", function (d) { return "translate(" + (i+1) * (NODE_RADIUS * 4) + "," + (NODE_RADIUS) + ")"; })
 		.select('circle')
-			.style('fill', function (d) { return 'green' })
+			.style('fill', function (d) { return '#aaa' })
 }
 
 function mistake (node, i) {
@@ -41,7 +41,7 @@ function mistake (node, i) {
 		.duration(250)
 		.attr("transform", function (d) { return "translate(" + (i+1) * (NODE_RADIUS * 4) + "," + (NODE_RADIUS * HEIGHT_MULTIPLIER * 2) + ")"; })
 		.select('circle')
-			.style('fill', function (d) { return 'red' })
+			.style('fill', function (d) { return '#eee' })
 }
 
 var index = 0;
@@ -56,7 +56,7 @@ var interval = setInterval(function () {
 	} else {
 		clearInterval(interval);
 	}
-}, 500);
+}, 250);
 
 
 </script>
