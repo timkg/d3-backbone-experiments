@@ -2,7 +2,8 @@
   "name": "d3js",
   "private": true,
   "dependencies": {
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "d3": "~3.4.3"
   },
   "devDependencies": {}
 }
